@@ -1,0 +1,59 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication8;
+
+import java.util.Scanner;
+
+/**
+ *
+ * 
+ */
+public class JavaApplication8 {
+
+    /**
+     * @param args the command line arguments
+     */
+
+    public static void main(String[] args) {
+
+        Scanner entrada = new Scanner(System.in);
+
+        
+        String nomeProduto;
+        String quantidadeTexto;
+        String precoTexto;
+
+     
+        int quantidade;
+        double precoUnitario;
+        double valorTotal;
+
+    
+        System.out.print("Digite o nome do produto: ");
+        nomeProduto = entrada.nextLine();
+
+        System.out.print("Digite a quantidade de produtos: ");
+        quantidadeTexto = entrada.nextLine();
+
+        System.out.print("Digite o preço unitário do produto: ");
+        precoTexto = entrada.nextLine();
+
+      
+        quantidade = Integer.parseInt(quantidadeTexto);
+        precoUnitario = Double.parseDouble(precoTexto);
+
+       
+        valorTotal = quantidade * precoUnitario;
+
+       
+        System.out.println("\n===== DADOS DA COMPRA =====");
+        System.out.println("Produto: " + nomeProduto);
+        System.out.println("Quantidade: " + quantidade);
+        System.out.printf("Preço unitário: R$ %.2f%n", precoUnitario);
+        System.out.printf("Valor total: R$ %.2f%n", valorTotal);
+
+        entrada.close();
+    }
+}
